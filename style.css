@@ -1,0 +1,113 @@
+* {
+    margin : 0px ;
+    padding : 0px ;
+    text-decoration: none;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+}
+
+
+body {
+    padding-top: 140px ;
+}
+
+header {
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+
+    position: fixed ;
+    left : 0px ; 
+    right: 0px ;
+    top: 0px; 
+
+    background-color: rgb(68, 72, 72)
+}
+
+.HeaderName {
+    padding: 10px 0px ;
+    font-size: 40px ;
+    width : 100%; 
+    
+    text-align: center;
+    color: rgb(97, 242, 211);
+    border-bottom: 2px solid rgb(75, 186, 162);
+
+}
+
+.Menu {
+    width : 100%;
+    color: rgb(97, 242, 211);
+}
+
+.Menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.Menu ul li {
+    padding: 10px 20px ;
+    font-size: 20px;
+
+    text-shadow: 1px 1px rgba(0,0,0,0.4);
+}
+
+.productInlineLayout {
+    margin: 0px 20px;
+
+    display: grid ;
+    grid-auto-flow : column ;
+    grid-auto-columns: 25%;
+
+    overflow-x : scroll; 
+    overscroll-behavior: contain;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+
+}
+
+.productInlineLayout ::-webkit-scrollbar { /*hide the scrollbar for Chrome Safari and Opera*/
+    display  : hidden ;
+}
+
+/* scroll snap attemp */
+
+.productInlineLayout  {
+    scroll-snap-type: inline mandatory;
+}
+
+.productInlineLayout  > * {
+    scroll-snap-align: start;
+}
+
+
+.product{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+
+    margin: 10px 10px ;
+
+    background-color: white;
+    border-top-left-radius: 5px ;
+    border-top-right-radius: 5px ;
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px ;
+
+    background-color: rgb(97, 242, 211); 
+    border-style: solid;
+    border-color: white;
+}
+
+
+.product_def p {
+    display: inline-block;
+}
+
+.product > img {
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    object-fit : cover ;
+}
